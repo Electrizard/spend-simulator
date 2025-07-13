@@ -1,0 +1,45 @@
+.item-container img{
+    height: 180px;
+    width:150px;
+
+}
+
+.buy-manager{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.buy-amount{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px;
+    height: 27px;
+    width: 50px;
+}
+
+.buy-manager button{
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+    padding: 1px;
+}
+
+.sell-button{
+    background-color: red;
+}
+
+.sell-button:hover{
+    background-color: rgb(255, 63, 63);
+    cursor: pointer;
+}
+
+.buy-button:hover{
+    background-color: rgb(128, 255, 102);
+    cursor: pointer;
+}
+
+.buy-button{
+    background-color: rgb(66, 255, 28);
+}
