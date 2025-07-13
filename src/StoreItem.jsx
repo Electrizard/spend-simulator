@@ -12,7 +12,7 @@ function StoreItem ({item}){
         if(cash >= item.price * buyAmount){
             setCash(cash - item.price * buyAmount);
 
-            const cartItemIndex = cart.findIndex((e) => e.item.id===item.id);
+            const cartItemIndex = findCartIndex();
             if(cartItemIndex != -1){
                 const newCart = [...cart]
                 newCart[cartItemIndex] = {
@@ -28,6 +28,26 @@ function StoreItem ({item}){
         }
     }
 
+    function findCartIndex(){
+        return cart.findIndex((e) => e.item.id===item.id);
+    }
+
+    function sellItem(){
+        const cartItemIndex = findCartIndex();
+        if(cartItemIndex === -1){
+            return;
+        }
+
+        if(cart[cartItemIndex].quantity > 0){
+            setCash(cash + buyAmount * item.price);
+            const newCart = [...cart];
+            newCart[cartItemIndex] = {
+                ...newCart[cartItemIndex],
+                quantity: newCart[cartItemIndex].quantity - buyAmount,
+            }
+            setCart(newCart);
+        }
+    }
 
     useEffect(() => {
         console.log("Cart updated:", cart);
@@ -39,7 +59,7 @@ function StoreItem ({item}){
             <h1>{item.name}</h1>
             <p>${item.price.toLocaleString()}</p>
             <div className="buy-manager">
-                <button className="sell-button">Sell</button>
+                <button onClick={sellItem} className="sell-button">Sell</button>
                 <input onChange = {(e) => {if(e.target.value >= 0 && Number.isInteger(Number(e.target.value)))setBuyAmount(Number(e.target.value));}} 
                 type="number" className="buy-amount" value={buyAmount == 0 ? "" : buyAmount}></input>
                 <button onClick={buyItem} className="buy-button">Buy</button>
