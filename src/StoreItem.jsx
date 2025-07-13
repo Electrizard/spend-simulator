@@ -38,7 +38,7 @@ function StoreItem ({item}){
             return;
         }
 
-        if(cart[cartItemIndex].quantity > 0){
+        if(cart[cartItemIndex].quantity > 0 && buyAmount <= cart[cartItemIndex].quantity){
             setCash(cash + buyAmount * item.price);
             const newCart = [...cart];
             newCart[cartItemIndex] = {
@@ -57,14 +57,14 @@ function StoreItem ({item}){
         <div className="item-container">
             <img src={item.image}></img>
             <h1>{item.name}</h1>
-            <p>${item.price.toLocaleString()}</p>
+            <p className="price-display">${item.price.toLocaleString()}</p>
             <div className="buy-manager">
                 <button onClick={sellItem} className="sell-button">Sell</button>
                 <input onChange = {(e) => {if(e.target.value >= 0 && Number.isInteger(Number(e.target.value)))setBuyAmount(Number(e.target.value));}} 
                 type="number" className="buy-amount" value={buyAmount == 0 ? "" : buyAmount}></input>
                 <button onClick={buyItem} className="buy-button">Buy</button>
             </div>
-            
+            <p className="quantity">Quantity: x{findCartIndex() === -1 ?"0":cart[findCartIndex()].quantity}</p>
         </div>
     );
 }

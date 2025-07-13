@@ -43,3 +43,12 @@
 .buy-button{
     background-color: rgb(66, 255, 28);
 }
+
+.price-display{
+    color:green;
+    font-weight: bold;
+}
+
+.quantity{
+    margin-top: 3px;
+}
