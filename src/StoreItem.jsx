@@ -38,13 +38,17 @@ function StoreItem ({item}){
             return;
         }
 
-        if(cart[cartItemIndex].quantity > 0 && buyAmount <= cart[cartItemIndex].quantity){
-            setCash(cash + buyAmount * item.price);
+        if(cart[cartItemIndex].quantity > 0){
+            const canSell = buyAmount <= cart[cartItemIndex].quantity
+            setCash(canSell ? cash + buyAmount * item.price: cash + cart[cartItemIndex].quantity * item.price);
+            
             const newCart = [...cart];
             newCart[cartItemIndex] = {
                 ...newCart[cartItemIndex],
-                quantity: newCart[cartItemIndex].quantity - buyAmount,
+                quantity: canSell ? newCart[cartItemIndex].quantity - buyAmount : 0,
             }
+
+            
             setCart(newCart);
         }
     }
