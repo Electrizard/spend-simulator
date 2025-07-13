@@ -1,5 +1,8 @@
 import {useContext} from 'react';
-import {CashContext} from './CashContext.jsx';
+import {CashContext} from './CashContext.jsx'; 
+import "./CashDisplay.css";
+
+import Store from "./Store.jsx";
 
 function CashDisplay(){
     const {cash} = useContext(CashContext);
