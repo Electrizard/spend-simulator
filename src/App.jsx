@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import {CashContext} from "./CashContext.jsx";
+import {CashContext} from "./contexts/CashContext.jsx";
+import {CartContext} from './contexts/CartContext.jsx';
 import CashDisplay from "./CashDisplay.jsx";
 import Store from "./Store.jsx";
 function App() {
@@ -7,8 +8,10 @@ function App() {
   const [cart, setCart] = useState([]);
   return(
     <CashContext.Provider value={{cash, setCash}}>
-      <CashDisplay/>
-      <Store/>
+      <CartContext.Provider value={{cart, setCart}}>
+        <CashDisplay/>
+        <Store/>
+      </CartContext.Provider>
     </CashContext.Provider>
   );
 }

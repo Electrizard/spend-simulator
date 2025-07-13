@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import {CashContext} from './CashContext.jsx'; 
+import {CashContext} from './contexts/CashContext.jsx'; 
 import "./CashDisplay.css";
 
 
