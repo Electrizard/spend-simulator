@@ -4,6 +4,7 @@ import CashDisplay from "./CashDisplay.jsx";
 import Store from "./Store.jsx";
 function App() {
   const [cash, setCash] = useState(1000000);
+  const [cart, setCart] = useState([]);
   return(
     <CashContext.Provider value={{cash, setCash}}>
       <CashDisplay/>
