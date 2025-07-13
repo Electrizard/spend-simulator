@@ -5,8 +5,9 @@ import items from "./data/items.js";
 function Store(){
     return(
         <div className="store-item-div">
-            <StoreItem item={items[0]}/>
-            <StoreItem item={items[1]}/>
+            {items.map((item) => (
+                <StoreItem key={item.id} item={item}/>
+            ))}
         </div>
         
     )
