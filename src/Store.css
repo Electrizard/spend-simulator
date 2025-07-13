@@ -1,8 +1,16 @@
 .store-item-div{
     font-family: Arial;
     text-align: center;
-    border: 1px solid black;
+    border: none;
     width: 12em;
     
-    }
+
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: nowrap;
+    padding: 1em;
+    
+    
+}
 

@@ -6,6 +6,7 @@ function Store(){
     return(
         <div className="store-item-div">
             <StoreItem item={items[0]}/>
+            <StoreItem item={items[1]}/>
         </div>
         
     )
