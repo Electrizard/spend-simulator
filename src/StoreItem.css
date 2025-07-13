@@ -1,6 +1,7 @@
 .item-container {
   border: 1px solid black;
-  width: 12em;
+  width: 200px;
+  flex-shrink: 0;
   padding: 1em;
   box-sizing: border-box;
   text-align: center;

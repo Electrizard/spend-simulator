@@ -12,7 +12,8 @@ const items = [
         name: "Xbox Series X",
         price: 600,
         image: xboxImage,
-    }
+    },
+    
 ]
 
 
