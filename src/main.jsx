@@ -7,7 +7,7 @@ import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/spend-simulator">
       <App />
     </BrowserRouter>
   </StrictMode>
