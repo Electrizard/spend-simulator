@@ -1,0 +1,9 @@
+.receipt-container{
+    background-color: rgb(173, 173, 173);
+    border-radius: 5px;
+    padding: .5px 20px;
+    
+}
+.receipt-container p {
+    text-indent: 1.5em;
+}
