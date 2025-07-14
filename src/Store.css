@@ -16,3 +16,18 @@
 
 }
 
+
+.checkout-button{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 5em;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(151, 151, 151) !important;
+}
+
+.checkout-button:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}

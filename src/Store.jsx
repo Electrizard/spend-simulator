@@ -4,12 +4,14 @@ import items from "./data/items.js";
 
 function Store(){
     return(
-        <div className="store-item-div">
-            {items.map((item) => (
-                <StoreItem key={item.id} item={item}/>
-            ))}
-        </div>
-        
+        <>
+            <div className="store-item-div">
+                {items.map((item) => (
+                    <StoreItem key={item.id} item={item}/>
+                ))}
+            </div>
+            <button className="checkout-button">Checkout</button>
+        </>
     )
 }
 
