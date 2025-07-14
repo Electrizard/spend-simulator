@@ -8,7 +8,7 @@ function Checkout(){
         <div>
             <h1>You checked out!</h1>
             <Receipt/>
-            <h1 className="extra-money">You had ${cash.toLocaleString()} left</h1>
+            <h1 className="extra-money">You have ${cash.toLocaleString()} left</h1>
         </div>
     );
 }
