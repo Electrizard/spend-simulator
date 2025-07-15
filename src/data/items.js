@@ -5,6 +5,7 @@ import yachtImage from "../assets/images/yacht.png";
 import candyBarImage from "../assets/images/candybar.png";
 import headphonesImage from "../assets/images/headphones.png";
 import phoneImage from "../assets/images/phone.png";
+import bugattiImage from "../assets/images/bugatti-bolide.png";
 const rawItems = [
     
     {
@@ -45,7 +46,12 @@ const rawItems = [
         name: "iPhone 16 Pro Max",
         price: 1200,
         image: phoneImage,
-    }
+    },
+    {
+        name: "Bugatti Bolide",
+        price: 4700000,
+        image: bugattiImage,
+    },
 ]
 
 const items = rawItems.sort((a, b) => a.price - b.price).map((item, index) => ({
