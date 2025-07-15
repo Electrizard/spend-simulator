@@ -12,7 +12,6 @@ function App() {
   return (
     <CashContext.Provider value={{ cash, setCash }}>
       <CartContext.Provider value={{ cart, setCart }}>
-          
         <Routes>
           <Route path="/" element={<><CashDisplay/> <Store /></>} />
           <Route path="/checkout" element={<Checkout />} />
